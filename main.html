@@ -7,32 +7,44 @@
 <link rel="stylesheet" type="text/css" href="design.css">
     </head>
     <body>
+        <script>
+           function myFu(c){
+            document.getElementById("display").value+=c;
+            }
+            function cleard(){
+            document.getElementById("display").value=' ';
+            }
+            function Solve(){
+            var a = document.getElementById("display").value;
+            var b=eval(a);
+            document.getElementById("display").value=b;
+            }
+        </script>
         <div class="a">
-            <form name="cal">
-                <input type="text" name="display"><br> <br>
-                <input  type="button" value="9" onclick="cal.display.value+='9'">
-                <input  type="button" value="8" onclick="cal.display.value+='8'">
-                <input  type="button" value="7" onclick="cal.display.value+='7'">
-                <input  type="button" value="+" onclick="cal.display.value+='+'">
-                <br> <br>
-                <input  type="button" value="6" onclick="cal.display.value+='6'">
-                <input  type="button" value="5" onclick="cal.display.value+='5'">
-                <input  type="button" value="4" onclick="cal.display.value+='4'">
-                <input  type="button" value="-" onclick="cal.display.value+='-'">
-                <br> <br>
-                <input  type="button" value="3" onclick="cal.display.value+='3'">
-                <input  type="button" value="2" onclick ="cal.display.value+='2'">
-                <input  type="button" value="1" onclick="cal.display.value+='1'">
-                <input  type="button" value="*" onclick="cal.display.value+='*'">
-                <br> <br>
-                <input  type="button" value="0" onclick ="cal.display.value+='0'">
-                <input  type="button" value="/" onclick ="cal.display.value+='/'">
-                <input  type="button" value="%" onclick ="cal.display.value+='%'">
-                <input  type="button" value="=" onclick ="cal.display.value =eval(cal.display.value)">
-                <br> <br>
-                <input type="button" value="Delete" onclick="cal.display.value=''" id = "del">
-            </form>
             
+                <input type="text" id="display"><br> <br>
+                <input  type="button" value="9" onclick="myFu('9')">
+                <input  type="button" value="8" onclick="myFu('8')">
+                <input  type="button" value="7" onclick="myFu('7')">
+                <input  type="button" value="+" onclick="myFu('+')">
+                <br> <br>
+                <input  type="button" value="6" onclick="myFu('6')">
+                <input  type="button" value="5" onclick="myFu('5')">
+                <input  type="button" value="4" onclick="myFu('4')">
+                <input  type="button" value="-" onclick="myFu('-')">
+                <br> <br>
+                <input  type="button" value="3" onclick="myFu('3')">
+                <input  type="button" value="2" onclick="myFu('2')">
+                <input  type="button" value="1" onclick="myFu('1')">
+                <input  type="button" value="*" onclick="myFu('*')">
+                <br> <br>
+                <input  type="button" value="0" onclick ="myFu('0')">
+                <input  type="button" value="/" onclick ="myFu('/')">
+                <input  type="button" value="%" onclick ="myFu('%')">
+                <input  type="button" value="=" onclick ="Solve( )">
+                <br> <br>
+                <input type="button" value="Delete" onclick="cleard()">
+                 
                
         </div>
                 
